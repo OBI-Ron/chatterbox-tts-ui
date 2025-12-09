@@ -1,4 +1,4 @@
-# Chatterbox-TTS UI
+# Chatterbox-TTS UI - Lite Version
 
 Lightweight Gradio interfaces for **Chatterbox-TTS**, ranging from a simple “Lite” interface to more advanced narrator and studio workflows.  
 This repository currently focuses on the **Lite edition**, designed to be clean, minimal, and easy for new users.
