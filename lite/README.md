@@ -15,7 +15,7 @@ The Lite edition enhances the basic Chatterbox demo by adding:
 - **Automatic text chunking** (handles long passages gracefully)
 - **Audio concatenation** (chunks are stitched into a single waveform)
 - **Optional dual-mono stereo export** (for easier use in DAWs like Audacity)
-- **A simple, user-friendly UI
+- **A simple, user-friendly UI**
 
 
 This interface **does not modify** Chatterbox-TTS itself — it simply provides an improved front-end.
