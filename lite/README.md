@@ -21,6 +21,8 @@ This interface **does not modify** Chatterbox-TTS itself — it simply provides 
 
 ---
 
+![Alt text](https://github.com/OBI-Ron/chatterbox-tts-ui/blob/main/lite/images/Interface.png)
+
 ## Running with a helper script (optional)
 
 This repository includes a template launch script you may use to start the Lite interface:
