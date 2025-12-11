@@ -34,6 +34,9 @@ from chatterbox.tts import ChatterboxTTS  # type: ignore
 # but large enough to keep chunks reasonably long.
 MAX_CHARS_PER_CHUNK = 280
 
+# Global singleton to avoid re-loading the model on every page refresh
+_GLOBAL_MODEL = None
+
 # Decide whether to use CUDA or CPU.
 try:
     import torch
@@ -122,15 +125,25 @@ def split_text_into_chunks(text: str, max_chars: int = MAX_CHARS_PER_CHUNK):
 
 def load_model():
     """
-    Load the ChatterboxTTS model once when the Gradio app starts.
+    Load the ChatterboxTTS model the first time this function is called,
+    then reuse the same instance for all future calls (e.g. after a
+    browser refresh).
 
     Returns:
         ChatterboxTTS instance.
     """
+    global _GLOBAL_MODEL
+
+    # If we've already loaded the model once in this Python process,
+    # just reuse it instead of trying to allocate it on the GPU again.
+    if _GLOBAL_MODEL is not None:
+        print("Reusing already loaded ChatterboxTTS model.")
+        return _GLOBAL_MODEL
+
     print(f"Loading ChatterboxTTS model on device: {DEVICE}")
-    model = ChatterboxTTS.from_pretrained(DEVICE)
+    _GLOBAL_MODEL = ChatterboxTTS.from_pretrained(DEVICE)
     print("Model successfully loaded.")
-    return model
+    return _GLOBAL_MODEL
 
 
 # -----------------------------
@@ -239,6 +252,9 @@ def generate(
     if make_stereo:
         stereo_wav = np.stack([full_wav, full_wav], axis=-1)
         return (model.sr, stereo_wav), chunk_info
+    
+    if DEVICE == "cuda":
+        torch.cuda.empty_cache()
 
     # Mono output
     return (model.sr, full_wav), chunk_info
