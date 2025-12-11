@@ -42,7 +42,7 @@ jobs:
               "README.md",
               "LICENSE",
               "CHANGELOG.md",
-              "lite/chatterbox_gradio_lite.py",
+              "lite/chatterbox-tts-lite-ui.py",
               "lite/README.md",
               "TROUBLESHOOTING_UBUNTU_22_04.md",
               "images/lite-ui.png",
