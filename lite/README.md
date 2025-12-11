@@ -1,5 +1,9 @@
 # Chatterbox-TTS UI - Lite Version
 
+> **Current Lite Edition version:** v0.1.1  
+> See [GitHub releases](https://github.com/OBI-Ron/chatterbox-tts-ui/releases) for details.
+
+
 Lightweight Gradio interfaces for **Chatterbox-TTS**, ranging from a simple “Lite” interface to more advanced narrator and studio workflows.  
 This repository currently focuses on the **Lite edition**, designed to be clean, minimal, and easy for new users.
 
