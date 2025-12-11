@@ -30,16 +30,16 @@ jobs:
         run: |
           python - << 'EOF'
           import os
-          from huggingface_hub import HfApi, upload_file
+          from huggingface_hub import HfApi
 
           token = os.environ["HF_TOKEN"]
           repo_id = os.environ["HF_REPO_ID"]
 
           api = HfApi()
 
-          # Files to sync: adjust as needed
+          # Files to sync from GitHub to HuggingFace
           files_to_sync = [
-              "README.md",
+              "README_hf.md",
               "LICENSE",
               "CHANGELOG.md",
               "lite/chatterbox-tts-lite-ui.py",
@@ -53,12 +53,21 @@ jobs:
                   print(f"Skipping missing file: {path}")
                   continue
 
-              print(f"Uploading {path} to {repo_id}...")
+              # HF must receive README_hf.md as README.md
+              if path == "README_hf.md":
+                  path_in_repo = "README.md"
+              else:
+                  path_in_repo = path
+
+              print(f"Uploading {path} → {path_in_repo} ...")
+
               api.upload_file(
                   path_or_fileobj=path,
-                  path_in_repo=path,  # same relative path in HF repo
+                  path_in_repo=path_in_repo,
                   repo_id=repo_id,
                   repo_type="model",
                   token=token,
               )
+
+          print("Sync complete.")
           EOF
