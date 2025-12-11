@@ -1,7 +1,9 @@
 # Chatterbox-TTS UI
 
-Lightweight Gradio interfaces for **Chatterbox-TTS**, ranging from a simple “Lite” interface to more advanced narrator and studio workflows.  
-This repository currently focuses on the **Lite edition**, designed to be clean, minimal, and easy for new users.
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/OBI-Ron/chatterbox-tts-ui?label=Lite%20Edition%20version)](https://github.com/OBI-Ron/chatterbox-tts-ui/releases)
+
+Lightweight Gradio interfaces for **Chatterbox-TTS**, ranging from a simple “Lite” interface to more advanced narrator and studio workflows.
+
 
 ---
 
