@@ -19,6 +19,11 @@ The Lite edition enhances the basic Chatterbox demo by adding:
 - **Automatic text chunking** (handles long passages gracefully)
 - **Audio concatenation** (chunks are stitched into a single waveform)
 - **Optional dual-mono stereo export** (for easier use in DAWs like Audacity)
+- **Adjustable pseudo-stereo effect** (10-30ms left channel delay, default 13ms)
+- **Character management system** (save voice presets for audiobook creation)
+- **Automatic browser launch** (opens automatically on startup)
+- **Auto-shutdown after inactivity** (frees GPU after 5 minutes idle)
+- **Example characters included** (Ralph and Susan with sample audio)
 - **A simple, user-friendly UI**
 
 
@@ -27,6 +32,7 @@ This interface **does not modify** Chatterbox-TTS itself — it simply provides 
 ---
 
 ![Alt text](https://github.com/OBI-Ron/chatterbox-tts-ui/blob/main/lite/images/Interface.png)
+![Alt text](https://github.com/OBI-Ron/chatterbox-tts-ui/blob/main/lite/images/Interface_02.png)
 
 ## Running with a helper script (optional)
 

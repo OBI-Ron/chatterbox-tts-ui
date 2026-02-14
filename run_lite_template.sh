@@ -1,0 +1,1 @@
+lite/helper_script/run_lite_template.sh

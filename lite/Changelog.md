@@ -6,7 +6,30 @@ The format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ---
 
-## [0.1.1] – 2025-12-11
+## [0.1.2] - 2026-02-14
+
+### Added
+
+- Character management - providing support for audio book creation
+  - From the Generate Audio tab you can:
+    - Load a character preset
+    - Save current settings for character creation
+    - Regenerate character list
+  - From the Manage Character tab you can:
+    - Create & save characters
+    - Delete characters
+    - Load character into audio generator
+  - Included two example characters (Ralph and Susan) each with sample audio
+    - Sample voices generated from open source voices from https://brycebeattie.com/files/tts/
+- Quasi stereo effect
+  - Adjustable left channel delay (10-30ms, default 13ms) for pseudo-stereo output
+  - Creates spatial separation in dual-mono exports
+- Automatic browser launch on startup
+- Automatic TTS server shutdown after 5 minutes of inactivity
+- GPU memory cleanup on shutdown
+  
+
+## [0.1.1] – 2025-01-11
 
 ### Fixed
 
@@ -17,7 +40,7 @@ The format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ---
 
-## [0.1.0] – 2025-12-10
+## [0.1.0] – 2025-01-10
 
 ### Added
 

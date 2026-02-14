@@ -1,0 +1,14 @@
+{
+  "name": "Ralph",
+  "description": "Main character",
+  "created_at": "2026-02-13T16:15:17.066731",
+  "settings": {
+    "exaggeration": 0.55,
+    "cfg_weight": 0.55,
+    "temperature": 0.75,
+    "min_p": 0.04,
+    "top_p": 1.0,
+    "repetition_penalty": 1.2,
+    "seed": 54.0
+  }
+}
